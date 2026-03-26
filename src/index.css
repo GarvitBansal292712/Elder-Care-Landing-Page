@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-ivory: #FDFCFB;
+  --color-charcoal: #1A1A1A;
+  --color-teal-deep: #0D3B3F;
+  --color-sage-muted: #8DA399;
+  --color-copper: #B87333;
+}
+
+@layer base {
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif leading-[0.9] tracking-tight;
+  }
+}
+
+/* Brutalist Utilities */
+.brutal-border {
+  @apply border border-charcoal;
+}
+
+.brutal-border-b {
+  @apply border-b border-charcoal;
+}
+
+.brutal-border-r {
+  @apply border-r border-charcoal;
+}
+
+.brutal-shadow {
+  @apply shadow-[4px_4px_0px_0px_rgba(26,26,26,1)];
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.editorial-heading {
+  @apply font-serif italic font-light;
+}
+
+.btn-brutal {
+  @apply border border-charcoal bg-teal-deep text-ivory px-8 py-4 font-medium transition-all hover:bg-copper hover:text-ivory active:translate-x-[2px] active:translate-y-[2px] active:shadow-none shadow-[4px_4px_0px_0px_rgba(26,26,26,1)];
+}
